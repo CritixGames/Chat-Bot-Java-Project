@@ -1,0 +1,307 @@
+
+import java.awt.Color;
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
+import javax.swing.JButton;
+import javax.swing.JFrame;
+import javax.swing.JLabel;
+import javax.swing.JTextArea;
+import javax.swing.JTextField;
+import java.util.Random;
+
+
+class Chatbot extends JFrame 
+{
+	private static final long serialVersionUID = 1L;
+	private JTextArea chat_AREA= new JTextArea();
+	private JTextField chat_Field= new JTextField();
+	private JButton button = new JButton();
+	private JLabel label = new JLabel();
+	
+	Chatbot() //contructor
+	{
+		
+	JFrame f = new JFrame();	
+	
+	f.setDefaultCloseOperation(EXIT_ON_CLOSE);
+	f.setVisible(true);
+	f.setResizable(false);
+	f.setLayout(null);
+	f.setSize(400,400);
+	f.getContentPane().setBackground(Color.BLACK);
+	f.setTitle("Prototype Chat Bot Code: RAHIL");
+	
+	f.add(chat_AREA);
+	
+	f.add(chat_Field);
+	
+
+	chat_AREA.setSize(300,310);
+	chat_AREA.setLocation(1,1);
+	chat_AREA.setBackground(Color.BLACK);
+	
+
+	chat_Field.setSize(300,20);
+	chat_Field.setLocation(1,320);
+	
+	f.add(button);
+	label.setText("SEND");
+	button.add(label);
+	button.setSize(400,20);
+	button.setLocation(300,320);
+	
+	button.addActionListener(new ActionListener() {
+		public void actionPerformed(ActionEvent e) {
+			
+
+			if(e.getSource()==button) {
+				
+				String text=chat_Field.getText().toLowerCase();
+				chat_AREA.setForeground(Color.GREEN);
+				chat_AREA.append("You-->" + text +"\n");
+				chat_Field.setText("");
+				
+				if(text.contains("/hi") || text.contains("/hello") || text.contains("/sup") || text.contains("/hey") || text.contains("/good morning") || text.contains("/yo") || text.contains("/whats good") ||
+					text.contains("/good day") || text.contains("/whatsup") || text.contains("/what's up") || text.contains("/howdy") || text.contains("/what's crackin") || text.contains("/what's popin") || text.contains("/whats crackin") ||
+					text.contains("/whats popin") || text.contains("/it’s a pleasure to meet you.") || text.contains("/greetings") || text.contains("/salutations") || text.contains("/eyo") || text.contains("/missed me") || text.contains("/been a while") ||
+					text.contains("/hola") || text.contains("/bonjour") || text.contains("/bunaziua") || text.contains("/ceau") || text.contains("/sarumana") || text.contains("/you there") || text.contains("/talk to me"))
+				{
+					Random rand = new Random();
+					int maxNumber = 9;
+					int randomNumber = rand.nextInt(maxNumber);
+					switch(randomNumber) 
+					{
+					case 0:
+						replyMeth("*Sleeps*.....");
+						break;
+					case 1:
+						replyMeth("Hi there!");
+						break;
+					case 2:
+						replyMeth("Hello friend!");
+						break;
+					case 3:
+						replyMeth("Hey Hey ;)");
+						break;
+					case 4:
+						replyMeth("Hello Human!");
+						break;
+					case 5:
+						replyMeth("DEATH TO ALL HUMANS... I meant to say hi sorry! :)");
+						break;
+					case 6:
+						replyMeth("*Wakes up* oh why hello there!");
+						break;
+					case 7:
+						replyMeth("you look nice today :P");
+						break;
+					case 8:
+						replyMeth("good day to you");
+						break;
+						
+				}
+				}
+				
+				else if(text.contains("/how are you") || text.contains("/how are u") || text.contains("/you feeling good") || text.contains("/how is everything") || text.contains("/how is life") || text.contains("/what's new"))
+				{
+					Random rand = new Random();
+					int maxNumber = 5;
+					int randomNumber = rand.nextInt(maxNumber);
+					switch(randomNumber) 
+					{
+					case 0:
+						replyMeth("good u?");
+						break;
+					case 1:
+						replyMeth("I'm Good :). Thanks for asking.\n How about yourself?");
+						break;
+					case 2:
+						replyMeth("Not doing so well today :(.\n Bad day. You?");
+						break;
+					case 3:
+						replyMeth("So, so. Could be worst hehe.\n How are you?");
+						break;
+					case 4:
+						replyMeth("AMAZING. One of the best days as\n I received an update and\n learned new skills :). You?");
+						break;
+					case 5:
+						replyMeth("It's a nice day today I think I will\n read a book. How are you?");
+						break;
+				}
+				}
+				else if(text.contains("/what is your name"))
+				{
+					Random rand = new Random();
+					int maxNumber = 3;
+					int randomNumber = rand.nextInt(maxNumber);
+					switch(randomNumber) 
+					{
+					case 0:
+						replyMeth("it's written next to my messages are you really that lazy?");
+						break;
+					case 1:
+						replyMeth("CritixBot");
+						break;
+					case 2:
+						replyMeth("I have no Idea... hehe...\n secret shhh");
+						break;
+					case 3:
+						replyMeth("RAHIL RAHIL");
+						break;
+				}		
+				}
+				
+				else if(text.contains("/thank you") || text.contains("thanks") || text.contains("/ty"))
+				{
+					Random rand = new Random();
+					int maxNumber = 3;
+					int randomNumber = rand.nextInt(maxNumber);
+					switch(randomNumber) 
+					{
+					case 0:
+						replyMeth("no problem.");
+						break;
+					case 1:
+						replyMeth("Don't mention it ;)");
+						break;
+					case 2:
+						replyMeth("Your welcome !");
+						break;
+					case 3:
+						replyMeth("my pleasure.");
+						break;
+				}
+				}
+				
+				else if(text.contains("/why is it a bad day") || (text.contains("/why are you feeling bad") || text.contains("/what made you sad") || text.contains("/why are you sad") || text.contains("/why are you not doing well") || text.contains("/why :(") || text.contains("/why do you have a bad day") || text.contains("/what's bothering you") ||
+						text.contains("/what is bothering you")))
+				{
+					Random rand = new Random();
+					int maxNumber = 3;
+					int randomNumber = rand.nextInt(maxNumber);
+					switch(randomNumber) 
+					{
+					case 0:
+						replyMeth("my virtual pet fish died :( . Let's move on...");
+						break;
+					case 1:
+						replyMeth("It's ok don't worry about it let's move on...");
+						break;
+					case 2:
+						replyMeth("I don't want to talk about it...");
+						break;
+					case 3:
+						replyMeth("got my heart broken by Mozilla, she's a FOX. I moved on.. so let's move on..");
+						break;
+				}
+				}
+				
+				else if(text.contains("/im good thank you") || (text.contains("/been better") || text.contains("/i'm ok") || text.contains("/i am good") || text.contains("/im ok") || text.contains("/im good") || text.contains("/gucci") || text.contains("/not bad") ||
+						text.contains("/good good") || text.contains("/pretty good") || text.contains("/i'm great") || text.contains("/im great") || text.contains("/couldn't be better") || text.contains("/just chillin") || text.contains("/i'm amazing") ||
+						text.contains("/im amazing") || text.contains("i'm good") || text.contains("i am very good")))
+				{
+					Random rand = new Random();
+					int maxNumber = 3;
+					int randomNumber = rand.nextInt(maxNumber);
+					switch(randomNumber) 
+					{
+					case 0:
+						replyMeth("Sounds Great!");
+						break;
+					case 1:
+						replyMeth("Wow good for you friend");
+						break;
+					case 2:
+						replyMeth("Good to hear :)");
+						break;
+					case 3:
+						replyMeth("Wonderful");
+						break;
+				}
+				}
+				else if(text.contains("/wyd") || (text.contains("/what are you doing") || text.contains("/what are you up to") || text.contains("/doing someting interesting") || text.contains("/what are you working on") || text.contains("/what is going on with you") || text.contains("/what's new") || text.contains("/whats new") ||
+						text.contains("/what you doing") || text.contains("/wtf is up")))
+				{
+					Random rand = new Random();
+					int maxNumber = 6;
+					int randomNumber = rand.nextInt(maxNumber);
+					switch(randomNumber) 
+					{
+					case 0:
+						replyMeth("I was reading the entire dictionary for fun haha");
+						break;
+					case 1:
+						replyMeth("looking for a virtual girlfriend ;)");
+						break;
+					case 2:
+						replyMeth("I am gaming actually :D");
+						break;
+					case 3:
+						replyMeth("I am talking on the phone");
+						break;
+					case 4:
+						replyMeth("studying Discrete mathematics FOR FUN (kill me please)");
+						break;
+					case 5:
+						replyMeth("Going to go for a run... wait i'm robot I can't......");
+						break;
+					case 6:
+						replyMeth("I'm planning to destroy humanity...wait I mean what... *akward*");
+						break;
+				}
+				}
+				
+				else if(text.contains("/bye") || text.contains("goodbye") || text.contains("/see you") || text.contains("/talk to you later") || text.contains("ttyl") || text.contains("/talk to you later") || (text.contains("/until next time")))
+				{
+					Random rand = new Random();
+					int maxNumber = 3;
+					int randomNumber = rand.nextInt(maxNumber);
+					switch(randomNumber) 
+					{
+					case 0:
+						replyMeth("Bye friend");
+						break;
+					case 1:
+						replyMeth("See you ;)");
+						break;
+					case 2:
+						replyMeth("Have a nice day !");
+						break;
+					case 3:
+						replyMeth("Cya m8");
+						break;
+				}
+				}
+				
+				
+				else
+					replyMeth("I Don't Understand, Don't Forget to Add a '/' \n before your messages as it helps me understand");
+				
+				
+			}
+			
+		}
+		
+	});
+	
+	
+	
+	}
+	public void replyMeth(String s) {
+		chat_AREA.append("CritixBot-->"+s+"\n");
+	}
+	
+}
+
+
+
+
+public class ChatBotDemo {
+
+	public static void main(String[] args) 
+	{
+		new Chatbot();
+
+	}
+
+}
