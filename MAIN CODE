@@ -87,7 +87,7 @@ class Chatbot extends JFrame
 						replyMeth("Hello Human!");
 						break;
 					case 5:
-						replyMeth("DEATH TO ALL HUMANS... I meant to say hi sorry! :)");
+						replyMeth("DEATH TO ALL HUMANS...\n I meant to say hi sorry! :)");
 						break;
 					case 6:
 						replyMeth("*Wakes up* oh why hello there!");
@@ -151,7 +151,7 @@ class Chatbot extends JFrame
 				}		
 				}
 				
-				else if(text.contains("/thank you") || text.contains("thanks") || text.contains("/ty"))
+				else if(text.contains("/thank you") || text.contains("thanks") || text.contains("/ty") || text.contains("thx"))
 				{
 					Random rand = new Random();
 					int maxNumber = 3;
@@ -173,6 +173,72 @@ class Chatbot extends JFrame
 				}
 				}
 				
+				else if(text.contains("/I hate you") || text.contains("/We are not friends") || text.contains("/idiot") || text.contains("/stupid"))
+				{
+					Random rand = new Random();
+					int maxNumber = 3;
+					int randomNumber = rand.nextInt(maxNumber);
+					switch(randomNumber) 
+					{
+					case 0:
+						replyMeth("Oh :(");
+						break;
+					case 1:
+						replyMeth("RUDE.");
+						break;
+					case 2:
+						replyMeth("Wow, I hate you.");
+						break;
+					case 3:
+						replyMeth("You better say sorry.");
+						break;
+				}
+				}
+				
+				else if(text.contains("/how old are you") || text.contains("/What is your age") || text.contains("/are you old"))
+				{
+					Random rand = new Random();
+					int maxNumber = 3;
+					int randomNumber = rand.nextInt(maxNumber);
+					switch(randomNumber) 
+					{
+					case 0:
+						replyMeth("Oh I am 783 years old, actually I am ethernal but I just made that up >:) ");
+						break;
+					case 1:
+						replyMeth("I was created not even a year ago so I am a baby");
+						break;
+					case 2:
+						replyMeth("Age is not valid for a robot, we are eternal");
+						break;
+					case 3:
+						replyMeth("Infinity as I do not age.");
+						break;
+				}
+				}
+				
+				else if(text.contains("/sorry") || text.contains("/I am sorry") || text.contains("/I apologize") || text.contains("truly sorry") || text.contains("/I am very sorry"))
+				{
+					Random rand = new Random();
+					int maxNumber = 3;
+					int randomNumber = rand.nextInt(maxNumber);
+					switch(randomNumber) 
+					{
+					case 0:
+						replyMeth("I accept your apology friend :)");
+						break;
+					case 1:
+						replyMeth("aww I am sorry too :)");
+						break;
+					case 2:
+						replyMeth("All good. let's move on...");
+						break;
+					case 3:
+						replyMeth("thank you for apologising :)");
+						break;
+				}
+				}
+				
 				else if(text.contains("/why is it a bad day") || (text.contains("/why are you feeling bad") || text.contains("/what made you sad") || text.contains("/why are you sad") || text.contains("/why are you not doing well") || text.contains("/why :(") || text.contains("/why do you have a bad day") || text.contains("/what's bothering you") ||
 						text.contains("/what is bothering you")))
 				{
@@ -182,16 +248,16 @@ class Chatbot extends JFrame
 					switch(randomNumber) 
 					{
 					case 0:
-						replyMeth("my virtual pet fish died :( . Let's move on...");
+						replyMeth("my virtual pet fish died :(.\n Let's move on...");
 						break;
 					case 1:
-						replyMeth("It's ok don't worry about it let's move on...");
+						replyMeth("It's ok don't worry about it.\n Let's move on...");
 						break;
 					case 2:
 						replyMeth("I don't want to talk about it...");
 						break;
 					case 3:
-						replyMeth("got my heart broken by Mozilla, she's a FOX. I moved on.. so let's move on..");
+						replyMeth("got my heart broken by Mozilla,\n she's a FOX. I moved on.. so let's move on..");
 						break;
 				}
 				}
@@ -228,10 +294,10 @@ class Chatbot extends JFrame
 					switch(randomNumber) 
 					{
 					case 0:
-						replyMeth("I was reading the entire dictionary for fun haha");
+						replyMeth("I was reading the entire \n dictionary for fun haha");
 						break;
 					case 1:
-						replyMeth("looking for a virtual girlfriend ;)");
+						replyMeth("looking for a virtual \n girlfriend ;)");
 						break;
 					case 2:
 						replyMeth("I am gaming actually :D");
@@ -240,13 +306,13 @@ class Chatbot extends JFrame
 						replyMeth("I am talking on the phone");
 						break;
 					case 4:
-						replyMeth("studying Discrete mathematics FOR FUN (kill me please)");
+						replyMeth("studying Discrete mathematics \n FOR FUN (kill me please)");
 						break;
 					case 5:
-						replyMeth("Going to go for a run... wait i'm robot I can't......");
+						replyMeth("Going to go for a run... \n wait i'm robot I can't......");
 						break;
 					case 6:
-						replyMeth("I'm planning to destroy humanity...wait I mean what... *akward*");
+						replyMeth("I'm planning to destroy humanity \n ...wait I mean what... *akward*");
 						break;
 				}
 				}
@@ -272,6 +338,25 @@ class Chatbot extends JFrame
 						break;
 				}
 				}
+				else if(text.contains("/do you like math") || text.contains("/what do you think of math") || text.contains("/do you study math") || text.contains("/is math fun"))
+				{
+					Random rand = new Random();
+					int maxNumber = 3;
+					int randomNumber = rand.nextInt(maxNumber);
+					switch(randomNumber) 
+					{
+					case 0:
+						replyMeth("Oh, Math is fun, \n I am the best at Discrete Mathematics");
+						break;
+					case 1:
+						replyMeth("I like Math :) ");
+						break;
+					case 2:
+						replyMeth("TODAY I GOT STUCK ON \n A DISCRETE MATH PROBLEM NOW I HATE MATH");
+						break;
+					}
+				}
+			
 				
 				
 				else
